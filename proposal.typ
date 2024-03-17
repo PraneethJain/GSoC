@@ -5,20 +5,13 @@
 #align(center, text(size: 0.8cm, [Project Proposal]))
 #line(start: (-10%, 0%), end: (110%, 0%))
 #figure(image("julia.svg", width: 50%),)
-
 \
 \
-\
-
-
 #align(center, text(size: 9mm, [Language Interoperability]))
 #align(center, text(size: 9mm, [CxxWrap.jl]))
 #align(center, text(size: 6mm, [Moida Praneeth Jain]))
-
+#align(center, text(size: 6mm, [Mentor: Bart Janssens]))
 \
-\
-
-
 #figure(image("gsoc.png", width: 70%),)
 
 
