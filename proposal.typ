@@ -1,4 +1,5 @@
 #set text(font: "Roboto")
+#set heading(numbering: "1.")
 #show link: set text(rgb(0, 0, 255))
 
 #align(center, text(size: 1cm, [GSoC 2024]))
@@ -29,4 +30,27 @@
   )
 ])
 
-= Synopsis
+= Bio
+== Introduction
+== Project Synopsis
+== Why I chose this project
+== Relevant Work
+== Technical Skills
+== Why choose me
+== Contact Information
+
+= Benefits to Community
+
+= Deliverables
+
+== Primary Goals
+
+== Stretch Goals
+
+= Project Details
+
+= Project Schedule
+== Pre-Project Phase
+== Project Phase
+== Post-Project Phase
+== Logistics
