@@ -23,8 +23,9 @@
 
 
 #set page(
-  header: [The Julia Language #h(1fr) Language Interoperability -  CxxWrap STL],
-  footer: [
+
+  header: [The Julia Language #h(1fr) Language Interoperability -  CxxWrap STL #line(start: (-10%, 0%), end: (110%, 0%))],
+  footer: [#line(start: (-10%, 0%), end: (110%, 0%))
   GSoC 2024
   #h(1fr)
   Moida Praneeth Jain
