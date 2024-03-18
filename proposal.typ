@@ -29,7 +29,7 @@
   )
 ])
 
-#set par(leading: 5mm)
+#set par(leading: 4mm)
 #outline(
   title: [Table of Contents #linebreak() #linebreak()],
   indent: auto,
@@ -76,7 +76,6 @@ The following algorithms will be added
 - #link("https://en.cppreference.com/w/cpp/algorithm/ranges/minmax", [`std::ranges::minmax`])
 - #link("https://en.cppreference.com/w/cpp/algorithm/ranges/minmax_element", [`std::ranges::minmax_element`])
 - #link("https://en.cppreference.com/w/cpp/algorithm/ranges/clamp", [`std::ranges::clamp`])
-- #link("https://en.cppreference.com/w/cpp/algorithm/ranges/equal", [`std::ranges::equal`])
 
 === Documentation
 Currently, `StdVector` and `StdString` are documented. I will document the functionality of the existing containers (`StdValArray`, `StdDeque` and `StdQueue`) and all the new containers that I will be adding.
@@ -148,7 +147,50 @@ I will implement STL algorithm interfaces as constrained algorithms (introduced 
 
 Since it is hard to cover all the STL algorithms, I have chosen the ones that are most frequently used.
 = Project Schedule
-== Pre-Project Phase
-== Project Phase
-== Post-Project Phase
+The proposed schedule has been made keeping in mind the #link("https://developers.google.com/open-source/gsoc/timeline", [GSoC timeline]).
+
+At the end of both the coding periods, I have allocated a buffer week. This will be used in case the project would be behind schedule due to unforeseen circumstances. In case the project is on time, the buffer weeks would be used to implement the stretch goals.
+== Community Bonding Period
+_May 1 - May 26_: During this period, I aim to
+- Decide and set up a weekly status update method with the mentor
+- Further familiarize myself with the codebase
+- Add more tests for the existing code
+- Update the testing method in `libcxxwrap` to work outside of PRs as well
+== First Coding Period
+In the first phase, I will be working on the STL containers, their interfaces, documentation and testing. I plan on writing the tests and documentation along with the actual implementations, rather than pushing them towards the end.
+
+_May 27 - June 2_: `stack` and `priority_queue`
+
+_June 3 - June 9_: `set` and `multiset`
+
+_June 10 - June 16_: `unordered_set` and `unordered_multiset`
+
+_June 17 - June 23_: `list` and `forward_list`
+
+_June 24 - June 30_: `bitset`
+
+_July 1 - July 7_: Buffer week
+
+== Midterm Evaluation
+_July 8 - July 12_: Write the mid report and further polish the documentation and tests. Since at this point I will know how the code structure would be, it will be a good time to refactor the code.
+== Second Coding Period
+In the second phase, I will be working on STL algorithms, along with their documentation and testing.
+
+_July 15 - July 21_: `max`, `max_element`, `min`, `min_element`
+
+_July 22 - July 28_: `minmax`, `minmax_element`, `clamp`
+
+_July 29 - August 4_: `sort`, `stable_sort`
+
+_August 5 - August 11_: `lower_bound`, `upper_bound`, `binary_search`
+
+_August 12 - August 18_: Buffer week
+== Final Submission
+_August 19 - August 26_: Write the final report and document the process for future contributors
+
 == Availability
+I have my summer vacation from $10^"th"$ May to $1^"st"$ August, and don't have other commitments over this time period. I will be giving $approx$ 30 hours per week to this project in this time period, and plan to get the majority of the project done here.
+
+For the remainder of the time period, ($2^"nd"$ August to $26^"th"$ August), my college will resume and I will be able to give $approx$ 15 hours per week.
+
+If something does come up that clashes with the timeline, it will be informed in a timely manner and I will ensure that the working hours won't be affected.
