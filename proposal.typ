@@ -42,6 +42,22 @@
 == Project Synopsis
 == Why I chose this project
 == Relevant Work
+=== In CxxWrap
+I have implemented the interface for the `queue` data structure. I have also come up with and implemented a better testing solution for choosing the right versions of `CxxWrap` and `libcxxwrap`. Here are the relevant pull requests:
+- https://github.com/JuliaInterop/CxxWrap.jl/pull/413/
+- https://github.com/JuliaInterop/CxxWrap.jl/pull/408/
+- https://github.com/JuliaInterop/libcxxwrap-julia/pull/146
+
+=== Outside CxxWrap
+I have improved test coverage of some functions in the Julia standard library
+- https://github.com/JuliaLang/julia/pull/51835
+- https://github.com/JuliaLang/julia/pull/51941
+
+I contribute frequently to `TheAlgorithms/Julia`, which is a collection of algorithms implemented in Julia. Here is a link to all my PRs in this repository.
+- https://github.com/TheAlgorithms/Julia/pulls?q=is%3Apr+sort%3Aupdated-desc+author%3APraneethJain+is%3Aclosed
+
+I have built a simple ray tracer in C++ for my Computer Graphics course
+- https://github.com/PraneethJain/simple_renderer
 == Technical Skills
 == Why choose me
 == Contact Information
