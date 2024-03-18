@@ -29,7 +29,7 @@
   )
 ])
 
-#set par(leading: 4mm)
+#set par(leading: 3.5mm)
 #outline(
   title: [Table of Contents #linebreak() #linebreak()],
   indent: auto,
@@ -59,6 +59,15 @@ I contribute frequently to `TheAlgorithms/Julia`, which is a collection of algor
 I have built a simple ray tracer in C++ for my Computer Graphics course
 - https://github.com/PraneethJain/simple_renderer
 == Technical Skills
+=== Languages
+Julia $circle.small$ C $circle.small$ C++ $circle.small$ Rust $circle.small$ x86 Assembly $circle.small$ Bash $circle.small$ Python
+
+=== Theory 
+Data Structures and Algorithms $circle.small$ Algorithm Analysis and Design $circle.small$ Operating Systems $circle.small$ Computer Systems Organization
+
+=== Tools
+Linux $circle.small$ Docker $circle.small$ gdb $circle.small$ Latex
+
 == Why choose me
 == Contact Information
 #table(
