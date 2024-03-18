@@ -58,7 +58,7 @@ I have improved test coverage of some functions in the Julia standard library
 I contribute frequently to `TheAlgorithms/Julia`, which is a collection of algorithms implemented in Julia. Here is a link to all my PRs in this repository.
 - https://github.com/TheAlgorithms/Julia/pulls?q=is%3Apr+sort%3Aupdated-desc+author%3APraneethJain+is%3Aclosed
 
-I have built a simple ray tracer in C++ for my Computer Graphics course
+I have built a ray tracer in C++ for my Computer Graphics course
 - https://github.com/PraneethJain/simple_renderer
 == Technical Skills
 === Languages
@@ -70,11 +70,21 @@ Data Structures and Algorithms $circle.small$ Algorithm Analysis and Design $cir
 === Tools
 Linux $circle.small$ Docker $circle.small$ gdb $circle.small$ Latex
 
-== Why choose me
+== Bio
+=== About
+I'm a 2nd year undergraduate student pursuing my B.Tech in Computer Science at IIIT-H, and will be joining a research lab for my honors next semester. I am deeply interested in low level programming and am planning to pursue research in this field.
+
+=== Why choose me
+
+- I am well-versed in both Julia and C++. I have contributed to various open-source organisations in Julia, and have built many personal projects using C++.
+- I aim to heavily test and document all the functionality that I will be implementing
+- I am familiar with the codebase and have made contributions to this project
+
+I chose this project as it is the perfect way to utilize my skill-set, while learning a lot more at the same time.
+
 == Contact Information
 #table(
   columns: (1fr, 2fr),
-  // align: center,
   inset: 1em,
   [Name], [Moida Praneeth Jain],
   [College], [International Institute of Information Technology, Hyderabad, India],
@@ -91,6 +101,7 @@ The successful completion of this project will greatly benefit scientific comput
 
 = Deliverables
 == Primary Goals
+I aim to implement these goals during the course of GSoC this year.
 === Add STL Container Types
 The following containers, along with their commonly used methods, will be added
 - #link("https://cplusplus.com/reference/set/set/", [`std::set`])
@@ -130,7 +141,7 @@ I will be implementing unit tests for all the containers and algorithms being ad
 For integration testing on the #link("https://github.com/JuliaInterop/libcxxwrap-julia", [libcxxwrap.jl]) component, the automated tests currently work for pull requests. I will update the testing solution such that it works outside of pull requests as well.
 
 == Stretch Goals
-If time permits, I would like to make general improvements to the core of CxxWrap, and add more STL containers.
+If time permits, I would like to make general improvements to the core of CxxWrap, and add more STL containers. Otherwise, I will be implementing these after the completion of GSoC. 
 
 === Add Iterator Support
 Many STL algorithms depend upon the use of iterators. For this, an iterator type for containers has to be exposed from the C++ side, so that it can be used to call these algorithms from the Julia side.
