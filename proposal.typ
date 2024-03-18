@@ -29,7 +29,7 @@
   )
 ])
 
-#set par(leading: 6mm)
+#set par(leading: 5mm)
 #outline(
   title: [Table of Contents #linebreak() #linebreak()],
   indent: auto,
@@ -79,15 +79,22 @@ The following algorithms will be added
 - #link("https://en.cppreference.com/w/cpp/algorithm/ranges/equal", [`std::ranges::equal`])
 
 === Documentation
-Currently, `StdVector` and `StdString` are documented. I will document the functionality 
+Currently, `StdVector` and `StdString` are documented. I will document the functionality of the existing containers (`StdValArray`, `StdDeque` and `StdQueue`) and all the new containers that I will be adding.
 
-=== Unit Testing
-=== Integration Testing
+The algorithms being added will also be documented, along with usage examples for them.
+
+I will also be documenting the implementation steps for exposing more of the standard library to help future contributors.
+
+=== Testing
+I will be implementing unit tests for all the containers and algorithms being added.
+
+For integration testing on the #link("https://github.com/JuliaInterop/libcxxwrap-julia", [libcxxwrap.jl]) component, the automated tests currently work for pull requests. I will update the testing solution such that it works outside of pull requests as well.
+
 == Stretch Goals
 If time permits, I would like to make general improvements to the core of CxxWrap, and add more STL containers.
-=== Investigate compilation bottlenecks
 
 === Add Iterator Support
+Many STL algorithms depend upon the use of iterators. For this, an iterator type for containers has to be exposed from the C++ side, so that it can be used to call these algorithms from the Julia side.
 
 === Add more STL Container Types
 These  containers have been introduced in C++ 23
@@ -95,7 +102,7 @@ These  containers have been introduced in C++ 23
 - #link("https://en.cppreference.com/w/cpp/container/flat_multiset", [`std::flat_multiset`])
 
 = Project Details
-
+== Modularize the codebase
 = Project Schedule
 == Pre-Project Phase
 == Project Phase
