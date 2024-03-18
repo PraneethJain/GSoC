@@ -102,9 +102,53 @@ These  containers have been introduced in C++ 23
 - #link("https://en.cppreference.com/w/cpp/container/flat_multiset", [`std::flat_multiset`])
 
 = Project Details
-== Modularize the codebase
+== Codebase
+Currently, the standard library interface is implemented in a single file `StdLib.jl`. Since I will be adding many containers and algorithms, my first step will be modularizing the codebase. I will be splitting it into folders for containers and algorithms respectively, with appropriate files for each of them.
+== STL Containers
+https://en.cppreference.com/w/cpp/container
+
+I will be going over my plan for implementing STL containers using the example of `std::queue`
+
+To implement the containers listed, I will be taking a two-step approach
+=== libcxxwrap component
+The functionalities to be exposed need to be wrapped in a struct on the C++ side.
+
+For the case of `std::queue`, I have exposed the `front`, `push`, `pop` and `size` functionalities.
+```cpp
+template<typename T>
+struct WrapQueueImpl
+{
+  template<typename TypeWrapperT>
+  static void wrap(TypeWrapperT&& wrapped)
+  {
+    using WrappedT = std::queue<T>;
+    
+    wrapped.module().set_override_module(StlWrappers::instance().module());
+    wrapped.method("cppsize", &WrappedT::size);
+    wrapped.method("push_back!", [] (WrappedT& v, const T& val) { v.push(val); });
+    wrapped.method("front", [] (WrappedT& v) -> const T { return v.front(); });
+    wrapped.method("pop_front!", [] (WrappedT& v) { v.pop(); });
+    wrapped.module().unset_override_module();
+  }
+};
+```
+=== CxxWrap component
+The exposed functions need to mapped to the appropriate methods on the Julia interface.
+```jl
+Base.size(v::StdQueue) = (Int(cppsize(v)),)
+Base.push!(v::StdQueue, x) = push_back!(v, x)
+Base.first(v::StdQueue) = front(v)
+Base.pop!(v::StdQueue) = pop_front!(v)
+```
+
+== STL Algorithms
+https://en.cppreference.com/w/cpp/algorithm/ranges
+
+I will implement STL algorithm interfaces as constrained algorithms (introduced in C++ 20) using `std::ranges` on the C++ side. I have chosen to do so because these abstract away iterators, and allow for passing the containers directly. This leads to a much cleaner implementation on the Julia side.
+
+Since it is hard to cover all the STL algorithms, I have chosen the ones that are most frequently used.
 = Project Schedule
 == Pre-Project Phase
 == Project Phase
 == Post-Project Phase
-== Logistics
+== Availability
