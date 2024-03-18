@@ -16,7 +16,6 @@
 #figure(image("gsoc.png", width: 70%),)
 
 #set page(
-
   header: [The Julia Language #h(1fr) Language Interoperability -  CxxWrap STL #line(start: (-10%, 0%), end: (110%, 0%))],
   footer: [#line(start: (-10%, 0%), end: (110%, 0%))
   GSoC 2024
@@ -38,9 +37,12 @@
 #pagebreak()
 
 = Introduction
-
 == Project Synopsis
-== Why I chose this project
+
+The CxxWrap.jl package acts as a bridge between Julia and compiled C++ code, resulting in developers being able to use the best of both languages. While it already exposes a subset of the C++ standard library to Julia, there is a significant opportunity to expand its capabilities and enhance the interoperability further.
+
+The primary objective of this project is to improve the coverage of the C++ Standard Template Library within CxxWrap.jl. The STL is very widely used and provides a rich set of container types, algorithms, and utilities in C++.
+
 == Relevant Work
 === In CxxWrap
 I have implemented the interface for the `queue` data structure. I have also come up with and implemented a better testing solution for choosing the right versions of `CxxWrap` and `libcxxwrap`. Here are the relevant pull requests:
@@ -85,8 +87,9 @@ Linux $circle.small$ Docker $circle.small$ gdb $circle.small$ Latex
 
 = Benefits to Community
 
+The successful completion of this project will greatly benefit scientific computing researchers, systems programmers, low-level developers and  open-source contributors. By integrating high-performance C++ data structures and algorithms with Julia's scientific computing capabilities, these groups will gain access to a larger set of tools for tackling computationally and algorithmically intensive problems.
+
 = Deliverables
-Through this project, I aim to expose a larger portion of the C++ standard library to Julia.
 == Primary Goals
 === Add STL Container Types
 The following containers, along with their commonly used methods, will be added
