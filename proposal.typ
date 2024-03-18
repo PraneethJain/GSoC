@@ -45,6 +45,18 @@
 == Technical Skills
 == Why choose me
 == Contact Information
+#table(
+  columns: (1fr, 2fr),
+  // align: center,
+  inset: 1em,
+  [Name], [Moida Praneeth Jain],
+  [College], [International Institute of Information Technology, Hyderabad, India],
+  [Degree Program], [B.Tech in Computer Science],
+  [Time Zone], [GMT +5:30],
+  [Links], [#link("https://github.com/PraneethJain/", [Github]) - #link("https://www.linkedin.com/in/praneeth-jain/", [Linkedin])],
+  [Emails], [#link("mailto:praneethjain005@gmail.com") #link("mailto:moida.praneeth@students.iiit.ac.in")],
+  [Phone Number], [+91 6264381767],
+)
 
 = Benefits to Community
 
