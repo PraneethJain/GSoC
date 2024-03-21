@@ -146,6 +146,9 @@ If time permits, I would like to make general improvements to the core of CxxWra
 === Add Iterator Support
 Many STL algorithms depend upon the use of iterators. For this, an iterator type for containers has to be exposed from the C++ side, so that it can be used to call these algorithms from the Julia side.
 
+=== Add support for containers with multiple generics
+The current setup to add containers supports only one generic argument. Some containers like #link("https://en.cppreference.com/w/cpp/container/map", [`std::map`]) require multiple generic arguments, and thus require updating the current setup.
+
 === Add more STL Container Types
 These  containers have been introduced in C++ 23
 - #link("https://en.cppreference.com/w/cpp/container/flat_set", [`std::flat_set`])
@@ -204,17 +207,17 @@ At the end of both the coding periods, I have allocated a buffer week. This will
 == Community Bonding Period
 _May 1 - May 26_: During this period, I aim to
 - Decide and set up a weekly status update method with the mentor
-- Further familiarize myself with the codebase
-- Add more tests for the existing code
+- Add more tests for the existing containers
 - Update the testing method in `libcxxwrap` to work outside of PRs as well
+- Implement a range based algorithm to get an idea of the possible technical challenges
 == First Coding Period
 In the first phase, I will be working on the STL containers, their interfaces, documentation and testing. I plan on writing the tests and documentation along with the actual implementations, rather than pushing them towards the end.
 
-_May 27 - June 2_: `stack` and `priority_queue`
+_May 27 - June 2_: `set` and `multiset`
 
-_June 3 - June 9_: `set` and `multiset`
+_June 3 - June 9_: `unordered_set` and `unordered_multiset`
 
-_June 10 - June 16_: `unordered_set` and `unordered_multiset`
+_June 10 - June 16_: `stack` and `priority_queue`
 
 _June 17 - June 23_: `list` and `forward_list`
 
