@@ -23,6 +23,8 @@ https://summerofcode.withgoogle.com/programs/2024/projects/FWA99w0a
 
 Other than adding support for new containers and algorithms from the STL, I have also
 
+- Written documentation and tests for all the new features.
+
 - Simplified CI for PRs that involve changes both on the C++ side and the Julia side. Previously, the release procedure involved merging to a test branch, running the tests, and then merging into the main branch, which was not ideal. Now, when creating a PR on CxxWrap.jl, the first line of the description of the PR can refer to the corresponding libcxxwrap branch, and vice versa.
 
 - Refactored `StdLib.jl` in CxxWrap. Previously, due to the limited number of containers supported, all the methods were present in a single file. Now, each container type has its own file.
@@ -33,3 +35,5 @@ Other than adding support for new containers and algorithms from the STL, I have
 - The `<` operator having different behaviour on `C++17` and `C++20` for `std::pair` was a surprisingly hard bug to catch. [PR](https://github.com/JuliaInterop/libcxxwrap-julia/pull/163)
 
 ## Further Work
+
+- Look into methods to reduce the compile time of libcxxwrap
