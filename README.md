@@ -36,4 +36,5 @@ Other than adding support for new containers and algorithms from the STL, I have
 
 ## Further Work
 
-- Look into methods to reduce the compile time of libcxxwrap
+- Look into methods to reduce the compile time of libcxxwrap. Prepare an isolated reproducible test case that blows up compile time to file a bug report against clang.
+- Selectively apply parts of the STL functionality, as and when it is needed. Currently, all of the STL is applied to a particular type, even if only a part of the functionality is used.
